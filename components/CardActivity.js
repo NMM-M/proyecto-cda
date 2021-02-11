@@ -1,19 +1,16 @@
-import React from 'react';
+import React, {useState} from 'react';
 import { Text, View, StyleSheet, Image, TextInput, TouchableHighlight } from 'react-native';
+import SubmitButton from './CardActivity/SubmitButton';
+import CardHeader  from './CardActivity/CardHeader';
 
 const CardActivity = () => {
+
+    const [target, setTarget] = useState([]);
+
+
     return (  
         <View style={styles.container}>
-            <View style={styles.header}>
-                <Image
-                    resizeMode={'cover'}
-                    style={styles.img}
-                    source={require('../assets/images/actuar.jpg')}
-                />
-                <View style={styles.titulo}>
-                    <Text style={styles.textTitle}>Juego de actuacion</Text>
-                </View>
-            </View>
+            <CardHeader/>
             <View>
                 <Text style={{fontSize:17}}>Descripcion:</Text>
                 <Text style={{fontSize:15}}>Crea un video de un  minuto, donde tu y tus amigos representen el siguiente concepto:</Text>
@@ -25,24 +22,15 @@ const CardActivity = () => {
                 />
             </View>
             <View>
-                <Text style={{fontSize:17}}>
+                <Text style={styles.infoTitle}>
                     Intrucciones:
                 </Text>
-                <Text style={{fontSize:15}}>
+                <Text style={styles.infoDescription}>
                     Grabe un video, suba a Youtube y copie el link en el cuadro a continuacion.
                 </Text>
             </View>
-            <View style={{flexDirection:'row'}}>
-                <TextInput 
-                    style={styles.input}
-                    placeholder='Copia tu link Aqui!!'
-                ></TextInput>
-
-                <TouchableHighlight
-                    style={styles.button}
-                >
-                    <Text style={styles.textButton}>Enviar</Text>
-                </TouchableHighlight>
+            <View>
+                <SubmitButton/>
             </View>
         </View>
     );
@@ -56,28 +44,6 @@ const styles = StyleSheet.create({
         flex:1,
         padding:10,
         backgroundColor:'#fff'
-    },
-    header:{
-        width:'100%'
-    },
-    img:{
-        width:'100%',
-        height:130,
-    },
-    titulo:{
-        backgroundColor:'rgba(0,0,0,0.3)',
-        position: 'absolute', 
-        top: 0, 
-        left: 0, 
-        right: 0,
-        height:130,
-        alignItems: 'center', 
-        justifyContent: 'center'
-    },
-    textTitle:{
-        
-        color:'#fff',
-        fontSize:24,
     },
     text:{
         fontSize:15,
@@ -98,6 +64,12 @@ const styles = StyleSheet.create({
     textButton:{
         color:'#fff',
         fontSize:20
+    },
+    infoTitle:{
+        fontSize:17,
+    },
+    infoDescription:{
+        fontSize:15,
     }
 
 });

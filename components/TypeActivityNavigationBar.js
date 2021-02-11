@@ -16,11 +16,8 @@ const  styles = StyleSheet.create({
     container:{
         width:'100%',
         height:45,
-        borderTopWidth:0,
-        borderLeftWidth:0,
-        borderRightWidth:0,
         borderBottomColor:'black',
-        borderWidth:.5,
+        borderBottomWidth:.5,
         padding:3,
         flexDirection:'row',
         justifyContent:'space-between',
