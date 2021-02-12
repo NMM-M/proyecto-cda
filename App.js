@@ -4,7 +4,7 @@ import {NavigationContainer} from '@react-navigation/native';
 import {createStackNavigator} from '@react-navigation/stack';
 import Login from './views/Login';
 import Register from './views/Register';
-import Activities from './views/Activities';
+import Asignaturas from './views/Asignaturas';
 
 const Stack = createStackNavigator ();
 
@@ -15,6 +15,7 @@ const App = () => {
       <Stack.Navigator>
         <Stack.Screen name="Login" component={Login} options={{headerShown:false}}/>
         <Stack.Screen name="Register" component={Register} options={{title:"Registro"}}/>
+        <Stack.Screen name="Asignaturas" component={Asignaturas} options={{headerShown:false}}/>
       </Stack.Navigator>
     </NavigationContainer>
   );

@@ -19,7 +19,6 @@ const TypeActivityNavigationBar = () => {
 
     return (
         <>
-        {/* <NavigationContainer> */}
             <Tab.Navigator
                 tabBarOptions={{
                     allowFontScaling:true,
@@ -37,7 +36,6 @@ const TypeActivityNavigationBar = () => {
                     />
                 ))}
             </Tab.Navigator>
-        {/* </NavigationContainer> */}
         </> 
     )
 } 

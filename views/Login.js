@@ -21,8 +21,10 @@ const Login = () => {
                     <Text style={styles.label}>Contraseña:</Text>
                     <TextInput style={styles.input}></TextInput>
                 </View>
-                <View style={styles.button}>
-                    <TouchableWithoutFeedback>
+                <View style={styles.button} >
+                    <TouchableWithoutFeedback
+                        onPress={() => navigation.navigate("Asignaturas")}
+                    >
                         <Text style={styles.textButton} autoCompleteType='password'>Ingresar</Text>
                     </TouchableWithoutFeedback>
                 </View>
