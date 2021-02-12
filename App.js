@@ -4,17 +4,17 @@ import Header from './components/Header';
 import TypeActivityNavigationBar from './components/TypeActivityNavigationBar';
 import CardActivity from './components/CardActivity';
 
-
 const App = () => {
+
   return (
     <>
     <Header/>
     <TypeActivityNavigationBar/>
-    <View>
+    {/* <View>
       <ScrollView>
         <CardActivity/>
       </ScrollView>
-    </View>
+    </View> */}
     </>
   );
 };
