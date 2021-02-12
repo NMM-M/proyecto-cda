@@ -1,4 +1,4 @@
-import 'react-native-gesture-handler';
+// comentado para el app import 'react-native-gesture-handler';
 
 import React, {useState} from 'react';
 //componente para navegacion
@@ -19,8 +19,16 @@ const TypeActivityNavigationBar = () => {
 
     return (
         <>
-        <NavigationContainer>
-            <Tab.Navigator>
+        {/* <NavigationContainer> */}
+            <Tab.Navigator
+                tabBarOptions={{
+                    allowFontScaling:true,
+                    labelStyle:{
+                        fontSize:16,
+                        fontWeight:'bold'
+                    }
+                }}
+            >
                 {activityTypes.map(type => (
                     <Tab.Screen
                         key={type.id}
@@ -29,7 +37,7 @@ const TypeActivityNavigationBar = () => {
                     />
                 ))}
             </Tab.Navigator>
-        </NavigationContainer>
+        {/* </NavigationContainer> */}
         </> 
     )
 } 

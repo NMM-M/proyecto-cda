@@ -1,21 +1,22 @@
+import 'react-native-gesture-handler';
 import React from 'react';
-import { ScrollView, StyleSheet, View } from 'react-native'
-import Header from './components/Header';
-import TypeActivityNavigationBar from './components/TypeActivityNavigationBar';
-import CardActivity from './components/CardActivity';
+import {NavigationContainer} from '@react-navigation/native';
+import {createStackNavigator} from '@react-navigation/stack';
+import Login from './views/Login';
+import Register from './views/Register';
+import Activities from './views/Activities';
+
+const Stack = createStackNavigator ();
 
 const App = () => {
 
   return (
-    <>
-    <Header/>
-    <TypeActivityNavigationBar/>
-    {/* <View>
-      <ScrollView>
-        <CardActivity/>
-      </ScrollView>
-    </View> */}
-    </>
+    <NavigationContainer>
+      <Stack.Navigator>
+        <Stack.Screen name="Login" component={Login} options={{headerShown:false}}/>
+        <Stack.Screen name="Register" component={Register} options={{title:"Registro"}}/>
+      </Stack.Navigator>
+    </NavigationContainer>
   );
 };
 
