@@ -21,7 +21,7 @@ const Asignaturas = () => {
                         <Text style={styles.cardText}>{item.name}</Text>
                     </View>
                 )} 
-                keyExtractor={item => asignaturas.id}
+                keyExtractor={asignatura => asignaturas.id}
             />
         </View>
     );

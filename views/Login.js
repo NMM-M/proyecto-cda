@@ -17,17 +17,18 @@ const Login = () => {
                 </View>
                 <View>
                     <Text style={styles.label}>Email:</Text>
-                    <TextInput style={styles.input} autoCompleteType='email'></TextInput>
+                    <TextInput style={styles.input} autoCompleteType={'email'} keyboardType='email-address'></TextInput>
                     <Text style={styles.label}>Contraseña:</Text>
-                    <TextInput style={styles.input}></TextInput>
+                    <TextInput style={styles.input} secureTextEntry={true}></TextInput>
                 </View>
-                <View style={styles.button} >
-                    <TouchableWithoutFeedback
-                        onPress={() => navigation.navigate("Asignaturas")}
-                    >
-                        <Text style={styles.textButton} autoCompleteType='password'>Ingresar</Text>
-                    </TouchableWithoutFeedback>
-                </View>
+                <TouchableWithoutFeedback onPress={() => navigation.navigate("Asignaturas")}>
+                    <View style={styles.button}>
+                        <Text 
+                            style={styles.textButton} 
+                            autoCompleteType='password'
+                        >Ingresar</Text>
+                    </View>
+                </TouchableWithoutFeedback>
                 <View style={styles.links}>
                     <Text style={styles.link}>¿Olvidaste tu contraseña?</Text>
                     <Text style={styles.link} onPress={() => navigation.navigate("Register")}>Registrarse</Text>
