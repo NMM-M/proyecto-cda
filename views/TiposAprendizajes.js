@@ -21,6 +21,7 @@ const TiposAprendizajes = () => {
      <View style={styles.container}>
          <FlatList
             data={tipos}
+            keyExtractor={tipos => tipos.id.toString()}
             renderItem={({item}) => (
                 <TouchableWithoutFeedback
                     onPress={() => navigation.navigate("Activities")}
@@ -30,7 +31,6 @@ const TiposAprendizajes = () => {
                     </View>
                 </TouchableWithoutFeedback>
             )}
-            keyExtractor={tipo => tipos.id}
             />
      </View>
     );
