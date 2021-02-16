@@ -23,7 +23,7 @@ const Asignaturas = () => {
                 data={asignaturas}
                 renderItem = { ({item}) =>(
                     // Este on press debe ir a Tipos de aprendisaje
-                    <TouchableWithoutFeedback onPress={() => navigation.navigate("Activities")}> 
+                    <TouchableWithoutFeedback onPress={() => navigation.navigate('TiposAprendizajes')}> 
                         <View style={styles.card}>
                             <Text style={styles.cardText}>{item.name}</Text>
                         </View>
@@ -43,12 +43,14 @@ const styles = StyleSheet.create({
         justifyContent:'center',
     },
     card:{
-        backgroundColor:'#2e6383',
-        marginVertical:10,
-        justifyContent:'center',
-        alignItems:'center',
         borderRadius:5,
+        margin:'1.5%',
         padding:15,
+        borderWidth:1,
+        borderColor:'#fff',
+        backgroundColor:'#2e6383',
+        alignItems:'center',
+        justifyContent:'center',
     },
     cardText:{
         fontSize:30,
