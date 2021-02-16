@@ -7,8 +7,8 @@ const TypeActivityNavigationBar = () => {
 
     const Tab = createMaterialTopTabNavigator();
     const [activityTypes, setactivityTypes] = useState([
-        {id:1, type:'Video', title:'Actuacion',concept:'La celula', description:'Crea un video de un  minuto, donde tu y tus amigos representen el siguiente concepto:', instruccion:'Grabe un video, suba a Youtube y copie el link en el cuadro a continuacion.'},
-        {id:2, type:'Text', title:'Resumen',concept:'La Celula', description:'Haz un resumen indicando las caracteristicas de este tema:'},
+        {id:1, type:'Video', title:'Actuacion',concept:'La celula', description:'Crea un video de un  minuto, donde tu y tus amigos representen el siguiente concepto.', instruccion:'Grabe un video, suba a Youtube y copie el link en el cuadro a continuacion.'},
+        {id:2, type:'Text', title:'Resumen',concept:'La Celula', description:'Haz un resumen indicando las caracteristicas de este tema.'},
         {id:3, type:'Audio', title:'Entrevista',},
     ]);
 
