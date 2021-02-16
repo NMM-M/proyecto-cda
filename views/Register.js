@@ -11,7 +11,7 @@ const Register = () => {
                 </View>
                 <View>
                     <Text style={styles.label}>Nombre:</Text>
-                    <TextInput style={styles.input} autoCompleteType='name'></TextInput>
+                    <TextInput style={styles.input} autoCompleteType='name' autoCapitalize></TextInput>
                     <Text style={styles.label}>Email:</Text>
                     <TextInput style={styles.input} autoCompleteType='email'></TextInput>
                     <Text style={styles.label}>Contraseña:</Text>

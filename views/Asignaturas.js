@@ -1,7 +1,12 @@
 import React,{useState} from 'react';
-import { Text, View, StyleSheet, FlatList } from 'react-native';
+import {useNavigation} from '@react-navigation/native';
+import { Text, View, StyleSheet, FlatList, TouchableWithoutFeedback } from 'react-native';
 
 const Asignaturas = () => {
+
+    const navigation = useNavigation();
+
+
     const [asignaturas, setAsignaturas] = useState([
         {id:1, name:'Matematicas'},
         {id:2, name:'Lenguaje'},
@@ -17,9 +22,12 @@ const Asignaturas = () => {
             <FlatList
                 data={asignaturas}
                 renderItem = { ({item}) =>(
-                    <View style={styles.card}>
-                        <Text style={styles.cardText}>{item.name}</Text>
-                    </View>
+                    // Este on press debe ir a Tipos de aprendisaje
+                    <TouchableWithoutFeedback onPress={() => navigation.navigate("Activities")}> 
+                        <View style={styles.card}>
+                            <Text style={styles.cardText}>{item.name}</Text>
+                        </View>
+                    </TouchableWithoutFeedback>
                 )} 
                 keyExtractor={asignatura => asignaturas.id}
             />
