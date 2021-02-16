@@ -1,23 +1,23 @@
 import React from 'react';
 import { useState } from 'react';
-import { Text, View, FlatList, TouchableWithoutFeedback, StyleSheet, Dimensions } from 'react-native';
+import { Text, View, FlatList, TouchableWithoutFeedback, StyleSheet } from 'react-native';
 import {useNavigation} from '@react-navigation/native';
-import { color } from 'react-native-reanimated';
 
 const TiposAprendizajes = () => {
     //#region DEFINICION STATES Y VARIABLES
-    //#endregion
     const navigation = useNavigation();
-
+    
     const [tipos, setTipos] = useState([
         {id:1,name:'Kinestesico'},
         {id:2,name:'Auditivo'},
         {id:3,name:'Visual'},
         {id:4,name:'Memoristico'},
     ]);
+    //#endregion
+    
 
+    
     return (
-
      <View style={styles.container}>
          <FlatList
             data={tipos}

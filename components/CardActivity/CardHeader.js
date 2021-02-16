@@ -1,6 +1,14 @@
-import React from 'react';
+import React,  {useState, useEffect} from 'react';
 import { View, Image, Text, StyleSheet} from 'react-native'
-const CardHeader = () => {
+const CardHeader = ({titleActivity}) => {
+    const [title, setTitle] = useState('Actividad');
+    useEffect(() => {
+        const obtenerTitulo = (Dato) => {
+            setTitle(Dato);
+        }
+        obtenerTitulo(titleActivity);
+    },[])
+
     return ( 
         <View style={styles.container}>
             <Image
@@ -9,7 +17,7 @@ const CardHeader = () => {
                 source={require('../../assets/images/actuar.jpg')}
             />
             <View style={styles.titulo}>
-                <Text style={styles.textTitle}>Juego de actuacion</Text>
+                <Text style={styles.textTitle}>{title}</Text>
             </View>
         </View>
     );

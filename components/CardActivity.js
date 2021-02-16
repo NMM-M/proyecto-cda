@@ -3,14 +3,16 @@ import { Text, View, StyleSheet, Image, Animated, TouchableWithoutFeedback } fro
 import CardHeader  from './CardActivity/CardHeader';
 import CardBody  from './CardActivity/CardBody';
 
-const CardActivity = () => {
-
-    const [target, setTarget] = useState([]);
+const CardActivity = ({titleActivity, contentActivity}) => {
      
     return (  
         <View style={styles.container}>
-            <CardHeader/>
-            <CardBody/>
+            <CardHeader
+                titleActivity={titleActivity}
+            />
+            <CardBody
+                contentActivity={contentActivity}
+            />
         </View>
     );
 }

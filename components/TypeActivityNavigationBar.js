@@ -1,8 +1,4 @@
-// comentado para el app import 'react-native-gesture-handler';
-
 import React, {useState} from 'react';
-//componente para navegacion
-import { NavigationContainer } from '@react-navigation/native';
 import { createMaterialTopTabNavigator } from '@react-navigation/material-top-tabs';
 import CardActivity from './CardActivity';
 
@@ -11,9 +7,9 @@ const TypeActivityNavigationBar = () => {
 
     const Tab = createMaterialTopTabNavigator();
     const [activityTypes, setactivityTypes] = useState([
-        {id:1, type:'Video'},
-        {id:2, type:'Text'},
-        {id:3, type:'Audio'},
+        {id:1, type:'Video', title:'Actuacion',concept:'La celula', description:'Crea un video de un  minuto, donde tu y tus amigos representen el siguiente concepto:', instruccion:'Grabe un video, suba a Youtube y copie el link en el cuadro a continuacion.'},
+        {id:2, type:'Text', title:'Resumen',concept:'La Celula', description:'Haz un resumen indicando las caracteristicas de este tema:'},
+        {id:3, type:'Audio', title:'Entrevista',},
     ]);
 
 
@@ -32,7 +28,19 @@ const TypeActivityNavigationBar = () => {
                     <Tab.Screen
                         key={type.id}
                         name={type.type}
-                        component={CardActivity}
+                        children={() => (
+                            <CardActivity 
+                                titleActivity={type.title} 
+                                contentActivity={
+                                    {
+                                        id:type.id, 
+                                        concept:type.concept,
+                                        description:type.description,
+                                        instruccion:type.instruccion
+                                    }
+                                }
+                            />
+                        )}
                     />
                 ))}
             </Tab.Navigator>

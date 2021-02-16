@@ -1,9 +1,10 @@
-import React, {useState} from 'react';
+import React, {useState, useEffect} from 'react';
 import { Text,View, Animated, TouchableWithoutFeedback, StyleSheet, Image } from 'react-native'
 
-const CardBody = () => {
+const CardBody = ({contentActivity}) => {
+    console.log(contentActivity);
     //#region STATES Y VARIABLES    
-    
+    const {id, concept , description , instruccion, } = contentActivity; 
     //#endregion
     //#region ANIMACION
     const [animation] = useState(new Animated.Value(1));
@@ -35,10 +36,12 @@ const CardBody = () => {
     return (
         <View>
             <View>
-                <Text style={styles.infoTitle}>Descripcion:</Text>
-                <Text style={styles.infoDescription}>Crea un video de un  minuto, donde tu y tus amigos representen el siguiente concepto:</Text>
+                <Text style={styles.infoTitle}>
+                    Descripcion: <Text style={styles.infoDescription}>{description}</Text>                
+                </Text>
             </View>
             <View style={{justifyContent:'center', alignItems:'center'}}>
+                <Text style={styles.infoTitle}>La Celula</Text>
                 <Image
                     style={{width:300, height:200, marginTop:10}}
                     source={require('../../assets/images/celula.jpg')}
@@ -46,10 +49,7 @@ const CardBody = () => {
             </View>
             <View>
                 <Text style={styles.infoTitle}>
-                    Intrucciones:
-                </Text>
-                <Text style={styles.infoDescription}>
-                    Grabe un video, suba a Youtube y copie el link en el cuadro a continuacion.
+                    Intrucciones: <Text style={styles.infoDescription}>{instruccion}</Text>
                 </Text>
             </View>
             <View>
@@ -68,9 +68,12 @@ const CardBody = () => {
 const styles = StyleSheet.create({
     infoTitle:{
         fontSize:17,
+        marginVertical:5,
+        fontWeight:'bold'
     },
     infoDescription:{
-        fontSize:15,
+        fontSize:16,
+        fontWeight:'normal'
     },
     textButton:{
         color:'#FFF',
@@ -85,7 +88,7 @@ const styles = StyleSheet.create({
     },
     textButton:{
         color:'#fff',
-        fontSize:18
+        fontSize:20
     },
 });
  
