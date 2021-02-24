@@ -1,5 +1,5 @@
 import React from 'react';
-import {View, Text, StyleSheet, TextInput} from 'react-native';
+import { View, Text, StyleSheet, TextInput, ScrollView } from "react-native";
 import {useNavigation} from '@react-navigation/native';
 import {Button} from 'react-native-elements';
 
@@ -11,6 +11,7 @@ const Login = () => {
   return (
     <View style={styles.container}>
       <View style={styles.form}>
+        <ScrollView>
         <View style={styles.title}>
           <Text style={styles.textTitle}>Iniciar Sesion</Text>
         </View>
@@ -38,6 +39,7 @@ const Login = () => {
             Registrarse
           </Text>
         </View>
+        </ScrollView>
       </View>
     </View>
   );
@@ -46,16 +48,17 @@ const Login = () => {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#16303f',
+    padding:10,
     alignItems: 'center',
     justifyContent: 'center',
+    backgroundColor: '#16303f',
   },
   form: {
+    padding: 10,
     width: '90%',
     borderRadius: 5,
     borderWidth: 0.5,
     borderColor: '#fff',
-    padding: 10,
   },
   title: {
     alignItems: 'center',
@@ -70,22 +73,22 @@ const styles = StyleSheet.create({
   },
   link: {
     color: '#fff',
-    borderBottomColor: '#fff',
     borderBottomWidth: 1,
+    borderBottomColor: '#fff',
   },
   input: {
-    paddingHorizontal: 10,
-    marginVertical: 10,
-    backgroundColor: '#2e6383',
-    color: '#fff',
     fontSize: 18,
+    color: '#fff',
     borderRadius: 3,
+    marginVertical: 10,
     borderBottomWidth: 1,
+    paddingHorizontal: 10,
+    backgroundColor: '#2e6383',
     borderBottomColor: '#fff',
   },
   button: {
-    marginVertical: 10,
     borderRadius: 5,
+    marginVertical: 10,
   },
   textButton: {
     fontSize: 20,

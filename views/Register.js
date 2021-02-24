@@ -1,12 +1,13 @@
 import React from 'react';
-import {Text, View, StyleSheet, TextInput} from 'react-native';
-
+import { Text, View, StyleSheet, TextInput, ScrollView } from "react-native";
 import {Button} from 'react-native-elements';
 
 const Register = () => {
   return (
     <View style={styles.container}>
       <View style={styles.form}>
+        <ScrollView>
+
         <View style={styles.title}>
           <Text style={styles.textTitle}>Registrarse</Text>
         </View>
@@ -37,6 +38,7 @@ const Register = () => {
             titleStyle={styles.textButton}
           />
         </View>
+        </ScrollView>
       </View>
     </View>
   );
@@ -45,16 +47,17 @@ const Register = () => {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#16303f',
+    padding: 10,
     alignItems: 'center',
     justifyContent: 'center',
+    backgroundColor: '#16303f',
   },
   form: {
+    padding: 10,
     width: '90%',
     borderRadius: 5,
     borderWidth: 0.5,
     borderColor: '#fff',
-    padding: 10,
   },
   title: {
     alignItems: 'center',
@@ -68,18 +71,18 @@ const styles = StyleSheet.create({
     color: '#fff',
   },
   input: {
-    paddingHorizontal: 10,
-    marginVertical: 10,
-    backgroundColor: '#2e6383',
     color: '#fff',
     fontSize: 18,
     borderRadius: 3,
+    marginVertical: 10,
     borderBottomWidth: 1,
+    paddingHorizontal: 10,
     borderBottomColor: '#fff',
+    backgroundColor: '#2e6383',
   },
   button: {
-    marginVertical: 10,
     borderRadius: 5,
+    marginVertical: 10,
   },
   textButton: {
     fontSize: 20,

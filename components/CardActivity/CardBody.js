@@ -80,8 +80,7 @@ const CardBody = ({contentActivity}) => {
       </View>
       <View>
         <Text style={styles.infoTitle}>
-          Intrucciones:{' '}
-          <Text style={styles.infoDescription}>{instruction}</Text>
+          Intrucciones: <Text style={styles.infoDescription}>{instruction}</Text>
         </Text>
       </View>
       <View>
@@ -175,4 +174,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default CardBody;
+export default React.memo(CardBody);

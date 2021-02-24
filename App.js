@@ -64,7 +64,9 @@ const styles = {
   },
   headerVisible: {
     headerShown: true,
+    headerMode:'float',
     headerTitleAlign: 'center',
+    headerTitleAllowFontScaling:true,
   },
   headerLeft: {
     margin: 10,

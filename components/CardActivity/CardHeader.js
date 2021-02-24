@@ -48,4 +48,4 @@ const styles = StyleSheet.create({
     fontSize: 24,
   },
 });
-export default CardHeader;
+export default React.memo(CardHeader);

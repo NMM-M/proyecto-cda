@@ -49,9 +49,9 @@ const styles = StyleSheet.create({
     padding: 15,
   },
   titleStyle: {
+    fontSize: 26,
     width: '100%',
     letterSpacing: 0.5,
-    fontSize: 26,
     fontWeight: 'bold',
   },
   tileOverlay: {
@@ -60,13 +60,13 @@ const styles = StyleSheet.create({
   tileContainer: {
     height: 120,
     width: '100%',
-    marginVertical: 5,
     borderWidth: 3,
+    marginVertical: 5,
     borderColor: '#fff',
   },
   imageContainer: {
-    height: '100%',
     width: '100%',
+    height: '100%',
   },
 });
 

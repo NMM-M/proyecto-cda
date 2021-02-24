@@ -77,8 +77,8 @@ const Activities = () => {
 };
 const styleTabBar = {
   tabBar: {
-    showLabel: false,
     showIcon: true,
+    showLabel: false,
     allowFontScaling: true,
     tabStyle: {
       padding: 5,
