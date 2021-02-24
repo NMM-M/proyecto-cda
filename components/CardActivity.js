@@ -5,7 +5,6 @@ import CardBody from './CardActivity/CardBody';
 
 const CardActivity = ({contentActivity}) => {
   const {title} = contentActivity;
-
   return (
     <View style={styles.container}>
       <ScrollView>
