@@ -1,6 +1,6 @@
 import React from 'react';
 import {useState} from 'react';
-import {Tile} from "react-native-elements";
+import {Tile} from 'react-native-elements';
 import {View, FlatList, StyleSheet} from 'react-native';
 import {useNavigation} from '@react-navigation/native';
 
@@ -66,7 +66,7 @@ const styles = StyleSheet.create({
   },
   imageContainer: {
     height: '100%',
-    width:'100%'
+    width: '100%',
   },
 });
 

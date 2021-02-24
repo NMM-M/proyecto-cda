@@ -1,11 +1,7 @@
 import React, {useState} from 'react';
 import {useNavigation} from '@react-navigation/native';
 import {Tile} from 'react-native-elements';
-import {
-  View,
-  StyleSheet,
-  FlatList,
-} from 'react-native';
+import {View, StyleSheet, FlatList} from 'react-native';
 
 const Assignatures = () => {
   const navigation = useNavigation();
@@ -71,7 +67,7 @@ const styles = StyleSheet.create({
   },
   imageContainer: {
     height: '100%',
-    width:'100%'
+    width: '100%',
   },
 });
 export default Assignatures;

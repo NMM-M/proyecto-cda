@@ -1,12 +1,7 @@
 import React from 'react';
-import {
-  View,
-  Text,
-  StyleSheet,
-  TextInput,
-} from 'react-native';
+import {View, Text, StyleSheet, TextInput} from 'react-native';
 import {useNavigation} from '@react-navigation/native';
-import { Button } from "react-native-elements";
+import {Button} from 'react-native-elements';
 
 const Login = () => {
   //#region REACT NAVIGATION
@@ -33,8 +28,8 @@ const Login = () => {
           title={'Ingresar'}
           containerStyle={styles.button}
           titleStyle={styles.textButton}
-          onPress={() => navigation.navigate('Asignaturas')}>
-        </Button>
+          onPress={() => navigation.navigate('Asignaturas')}
+        />
         <View style={styles.links}>
           <Text style={styles.link}>¿Olvidaste tu contraseña?</Text>
           <Text

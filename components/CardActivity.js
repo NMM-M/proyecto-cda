@@ -1,8 +1,5 @@
 import React from 'react';
-import {
-  View,
-  StyleSheet,
-} from 'react-native';
+import {View, StyleSheet, ScrollView} from 'react-native';
 import CardHeader from './CardActivity/CardHeader';
 import CardBody from './CardActivity/CardBody';
 
@@ -11,14 +8,22 @@ const CardActivity = ({contentActivity}) => {
 
   return (
     <View style={styles.container}>
-      <CardHeader titleActivity={title} />
-      <CardBody contentActivity={contentActivity} />
+      <ScrollView>
+        <View style={styles.content}>
+          <CardHeader titleActivity={title} />
+          <CardBody contentActivity={contentActivity} />
+        </View>
+      </ScrollView>
     </View>
   );
 };
 
 const styles = StyleSheet.create({
-  container: {
+  container:{
+    flex: 1,
+    backgroundColor: '#16303f',
+  },
+  content: {
     margin: '2.5%',
     borderWidth: 1,
     borderColor: '#eee',

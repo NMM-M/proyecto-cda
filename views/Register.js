@@ -1,10 +1,5 @@
 import React from 'react';
-import {
-  Text,
-  View,
-  StyleSheet,
-  TextInput,
-} from 'react-native';
+import {Text, View, StyleSheet, TextInput} from 'react-native';
 
 import {Button} from 'react-native-elements';
 
@@ -23,14 +18,23 @@ const Register = () => {
             autoCapitalize={'words'}
           />
           <Text style={styles.label}>Email:</Text>
-          <TextInput style={styles.input} autoCompleteType={'email'} keyboardType={'email-address'} />
+          <TextInput
+            style={styles.input}
+            autoCompleteType={'email'}
+            keyboardType={'email-address'}
+          />
           <Text style={styles.label}>Contraseña:</Text>
-          <TextInput style={styles.input} autoCompleteType={'password'} secureTextEntry={true} />
+          <TextInput
+            style={styles.input}
+            autoCompleteType={'password'}
+            secureTextEntry={true}
+          />
         </View>
-        <View >
-          <Button containerStyle={styles.button}
+        <View>
+          <Button
+            containerStyle={styles.button}
             title={'Registrar'}
-                  titleStyle={styles.textButton}
+            titleStyle={styles.textButton}
           />
         </View>
       </View>

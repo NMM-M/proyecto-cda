@@ -1,7 +1,7 @@
 import 'react-native-gesture-handler';
 import React from 'react';
 //Navegacion
-import {TouchableOpacity} from "react-native";
+import {TouchableOpacity} from 'react-native';
 import {NavigationContainer} from '@react-navigation/native';
 import {createStackNavigator} from '@react-navigation/stack';
 //componentes
@@ -19,9 +19,8 @@ const App = () => {
   return (
     <NavigationContainer>
       <Stack.Navigator
-        initialRouteName={"Login"}
-        screenOptions={styles.headerVisible}
-      >
+        initialRouteName={'Login'}
+        screenOptions={styles.headerVisible}>
         <Stack.Screen
           name="Login"
           component={Login}
@@ -30,7 +29,7 @@ const App = () => {
         <Stack.Screen
           name="Register"
           component={Register}
-          options={{title:'Registro de Usuarios'}}
+          options={{title: 'Registro de Usuarios'}}
         />
         <Stack.Screen
           name="Asignaturas"
@@ -40,17 +39,18 @@ const App = () => {
         <Stack.Screen
           name="LearningStyle"
           component={LearningStyle}
-          options={{title:'Estilos de Aprendizaje'}}
+          options={{title: 'Estilos de Aprendizaje'}}
         />
         <Stack.Screen
           name="Activities"
           component={Activities}
-          options={{title:'Actividades',
-            headerRight:() => (
+          options={{
+            title: 'Actividades',
+            headerRight: () => (
               <TouchableOpacity style={styles.iconMenu}>
-                <Icon name='menu' type='material-community' size={34}/>
+                <Icon name="menu" type="material-community" size={34} />
               </TouchableOpacity>
-            )
+            ),
           }}
         />
       </Stack.Navigator>
@@ -70,7 +70,7 @@ const styles = {
     margin: 10,
   },
   iconMenu: {
-    padding:10
+    padding: 10,
   },
 };
 
