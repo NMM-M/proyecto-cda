@@ -50,7 +50,7 @@ const styles = StyleSheet.create({
     padding: 10,
     alignItems: 'center',
     justifyContent: 'center',
-    backgroundColor: '#16303f',
+    backgroundColor: '#f2f2f2',
   },
   form: {
     padding: 10,
@@ -58,27 +58,27 @@ const styles = StyleSheet.create({
     borderRadius: 5,
     borderWidth: 0.5,
     borderColor: '#fff',
+    backgroundColor:'#fff'
   },
   title: {
     alignItems: 'center',
   },
   textTitle: {
     fontSize: 24,
-    color: '#fff',
+    color: '#000',
   },
   label: {
     fontSize: 18,
-    color: '#fff',
+    color: '#000',
   },
   input: {
-    color: '#fff',
+    color: '#000',
     fontSize: 18,
     borderRadius: 3,
     marginVertical: 10,
-    borderBottomWidth: 1,
+    borderWidth: .5,
     paddingHorizontal: 10,
-    borderBottomColor: '#fff',
-    backgroundColor: '#2e6383',
+    borderColor: '#000',
   },
   button: {
     borderRadius: 5,

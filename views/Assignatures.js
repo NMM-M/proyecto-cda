@@ -44,7 +44,7 @@ const Assignatures = () => {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#16303f',
+    backgroundColor: '#f2f2f2',
   },
   content: {
     padding: 15,
@@ -56,14 +56,14 @@ const styles = StyleSheet.create({
     letterSpacing: 0.5,
   },
   tileOverlay: {
-    backgroundColor: 'rgba(0,0,0,0.3)',
+    backgroundColor: 'rgba(0,0,0,0.4)',
   },
   tileContainer: {
     height: 120,
     width: '100%',
-    borderWidth: 3,
+    borderWidth: 2,
     marginVertical: 5,
-    borderColor: '#fff',
+    borderColor: '#000',
   },
   imageContainer: {
     width: '100%',
