@@ -1,3 +1,4 @@
+/* eslint-disable prettier/prettier */
 import 'react-native-gesture-handler';
 import React from 'react';
 //Navegacion
@@ -12,7 +13,6 @@ import Register from './views/Register';
 import Assignatures from './views/Assignatures';
 import LearningStyle from './views/LearningStyle';
 import Activities from './views/Activities';
-
 const Stack = createStackNavigator();
 
 const App = () => {
@@ -32,7 +32,7 @@ const App = () => {
           options={{title: 'Registro de Usuarios'}}
         />
         <Stack.Screen
-          name="Asignaturas"
+          name="Assignatures"
           component={Assignatures}
           options={{title: 'Asignaturas'}}
         />
@@ -64,9 +64,9 @@ const styles = {
   },
   headerVisible: {
     headerShown: true,
-    headerMode:'float',
+    headerMode: 'float',
     headerTitleAlign: 'center',
-    headerTitleAllowFontScaling:true,
+    headerTitleAllowFontScaling: true,
   },
   headerLeft: {
     margin: 10,
