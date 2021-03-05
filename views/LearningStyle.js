@@ -1,72 +1,84 @@
 import React from 'react';
 import {useState} from 'react';
-import {Tile} from 'react-native-elements';
-import {View, FlatList, StyleSheet} from 'react-native';
+import {Icon, Text, Tooltip} from 'react-native-elements';
+import {View, StyleSheet, Dimensions, TouchableOpacity, ScrollView} from 'react-native';
 import {useNavigation} from '@react-navigation/native';
+
+//Variables
+const WidthScreen = Dimensions.get('window').width;
+const HeightScreen = Dimensions.get('window').height;
 
 const LearningStyle = () => {
   //#region DEFINICION STATES Y VARIABLES
   const navigation = useNavigation();
 
-  const [Learnings, setLearnings] = useState([
-    {id: 1, name: 'Kinestesico'},
-    {id: 2, name: 'Auditivo'},
-    {id: 3, name: 'Visual'},
-    {id: 4, name: 'Memoristico'},
+  const [learnings, setLearnings] = useState([
+    {id: 1, name: 'Kinetica', icon: 'child', backgroundColor:'#754d24'},
+    {id: 2, name: 'Auditivo', icon: 'music', backgroundColor:'#0070bd'},
+    {id: 3, name: 'Visual', icon: 'tablet', backgroundColor:'#c2262e'},
+    {id: 4, name: 'Logica', icon: 'calculator', backgroundColor:'#77cc83'},
+    {id: 5, name: 'Intrapersonal', icon: 'heart', backgroundColor:'#9e005c'},
+    {id: 6, name: 'Interpersonal', icon: 'chain', backgroundColor:'#fab03b'},
+    {id: 7, name: 'Linguistica', icon: 'book', backgroundColor:'#662e91'},
+    {id: 8, name: 'Naturalista', icon: 'leaf', backgroundColor:'#00a89e'},
   ]);
   //#endregion
+  //#region FUNCIONES
 
   return (
     <View style={styles.container}>
+      <ScrollView showsVerticalScrollIndicator={false}>  
       <View style={styles.content}>
-        <FlatList
-          data={Learnings}
-          keyExtractor={(Learnings) => Learnings.id.toString()}
-          renderItem={({item}) => (
-            <Tile
-              featured
-              activeOpacity={0.7}
-              title={item.name}
-              titleStyle={styles.title}
-              containerStyle={styles.tileContainer}
-              overlayContainerStyle={styles.tileOverlay}
-              imageContainerStyle={styles.imageContainer}
-              onPress={() => navigation.navigate('Activities')}
-              imageSrc={require('../assets/images/actuar.jpg')}
-            />
-          )}
-        />
+        {learnings.map((item) => (
+          <TouchableOpacity 
+            style={[styles.buttonContainer, {backgroundColor:item.backgroundColor}]}
+            key={item.id}
+          >
+            <Icon
+              type={'font-awesome'}
+              color={'#fff'}
+              name={item.icon}
+              size={50}
+              />
+            <Text style={styles.itemText}>{item.name}</Text>
+            <Icon
+              onPress={() => console.log('Info')}
+              type={'feather'}
+              name={'info'}
+              color={'#fff'}
+              />
+          </TouchableOpacity>
+        ))}
       </View>
+      </ScrollView>
     </View>
   );
 };
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#16303f',
+    backgroundColor: '#f2f2f2',
   },
   content: {
-    padding: 15,
+    flex: 1,
+    justifyContent: 'center',
+    flexDirection: 'row',
+    flexWrap: 'wrap',
+    padding: 10,
   },
-  titleStyle: {
-    fontSize: 26,
-    width: '100%',
-    letterSpacing: 0.5,
-    fontWeight: 'bold',
-  },
-  tileOverlay: {
-    backgroundColor: 'rgba(0,0,0,0.3)',
-  },
-  tileContainer: {
-    height: 120,
-    width: '100%',
-    borderWidth: 3,
-    marginVertical: 5,
+  buttonContainer: {
+    borderWidth: 1.5,
     borderColor: '#fff',
+    margin: 5,
+    borderRadius: Math.round(WidthScreen + HeightScreen) / 2,
+    width: WidthScreen * 0.4,
+    height: WidthScreen * 0.4,
+    justifyContent: 'center',
+    alignItems: 'center',
   },
-  imageContainer: {
-    width: '100%',
-    height: '100%',
+  itemText: {
+    color: '#fff',
+    fontSize: 18,
   },
 });
 
